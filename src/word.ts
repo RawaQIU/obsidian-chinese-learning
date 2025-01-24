@@ -1,5 +1,6 @@
 import { MarkdownRenderChild } from "obsidian";
 
+
 export class Word extends MarkdownRenderChild {
   static ALL_EMOJIS: Record<string, string> = {
     ":+1:": "👍",
@@ -22,3 +23,5 @@ export class Word extends MarkdownRenderChild {
     this.containerEl.replaceWith(emojiEl);
   }
 }
+
+const Emoji = Word;

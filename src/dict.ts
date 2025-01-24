@@ -1,9 +1,13 @@
 import _cedict from "../data/cedict-original.json"
 
 interface CEDict {
-    [word: string]: CEDictSimplifiedEntry | CEDictTraditionalEntry,
+    [word: string]: CEDictEntry,
 }
-
+interface CEDictEntry {
+    d: CEDictDefinitions,
+    t?: string,  // traditional
+    s?: string,  // simplified
+}
 interface CEDictDefinitions {
     [pinyin: string]: string[],
 }
